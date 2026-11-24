@@ -1,0 +1,135 @@
+header, .right, .left {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Hamburger Menu */
+
+.expand-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-lg);
+  color: var(--color-text-primary);
+  margin-right: 2rem;
+  transition: .3s ease;
+}
+
+.expand-menu:focus-visible {
+  outline: 2px solid var(--color-accent);
+}
+
+.expand-menu svg {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Header */
+
+h1 {
+  font-size: var(--text-2xl);
+  line-height: 1;
+  color: var(--color-text-primary);
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  transform: translateY(-3px);
+}
+
+/* Search */
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+}
+
+input {
+  padding: var(--space-1) var(--space-2);
+  padding-left: var(--space-10);
+  border: 2px solid var(--color-border);
+  background-color: var(--color-bg-tertiary);
+  transition: border 0.5s ease;
+}
+
+input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+input:focus-visible {
+  outline: none;
+  border: 2px solid var(--color-accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Profile */
+
+.profile {
+  padding: var(--space-2);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-image: linear-gradient(
+    to bottom right, 
+    var(--color-accent) 15%,
+    #8200DF 
+  );
+  color: #ffffff;
+  transition: .2s ease;
+  font-weight: var(--font-medium);
+}
+
+.profile:focus-visible {
+  outline: none;
+  border: 2px solid var(--color-accent);
+}
+
+.profile:active {
+  opacity: 95%;
+  scale: 0.9;
+}
+
+/* Media Query */
+
+@media (max-width: 768px) {
+  /* Menu */
+
+  .expand-menu {
+    display: flex;
+  }
+
+  /* Profile */
+
+  .profile {
+    display: none;
+  }
+}

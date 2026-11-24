@@ -2,20 +2,23 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: var(--color-bg-primary);
 }
 
 button, input {
   font: inherit;
+  border-radius: var(--radius-md);
 }
 
 button {
@@ -25,4 +28,14 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+code {
+  font: var(--font-mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
 }
