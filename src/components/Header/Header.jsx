@@ -1,4 +1,3 @@
-import { NavLink } from "react-router";
 import { FiSearch } from "react-icons/fi";
 import { FaBars } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
@@ -41,9 +40,6 @@ function Header({ isSideBarOpen, toggleSideBar }) {
           />
         </form>
 
-        <button className="profile">
-          GS
-        </button>
       </div>
     </header>
   )
